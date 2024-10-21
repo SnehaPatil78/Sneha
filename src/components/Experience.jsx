@@ -9,8 +9,8 @@ const Experience = () => {
   return (
     <div className='experience bg-black w-screen text-white pt-4 pt-16 overflow-x-hidden' id='experience'>
       <div className='pt-12 sm:px-16'>
-        <p className='font-light'>MY JOURNEY SO FAR.</p>
-        <h2 className='text-4xl sm:text-5xl font-extrabold mt-2'>Work Experience.</h2>
+        <p className='font-light'></p>
+        <h2 className='text-4xl sm:text-5xl font-extrabold mt-2'>Internships</h2>
       </div>
       <VerticalTimeline className='mt-9'>
         {experiences.map((experience) => (
