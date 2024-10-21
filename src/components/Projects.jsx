@@ -1,18 +1,19 @@
-
 import React from "react";
-import vpn from '../assets/vpn.png'
-import copeople from '../assets/copeople.png'
-import Footer from './Footer'
+import vpn from '../assets/vpn1.png';  // Replace with the correct image path if needed
+import copeople from '../assets/copeople1.png';  // Replace with the correct image path if needed
+import Footer from './Footer';
 
-const ProjectCard = ({ image, title, description, git, technologies }) => {
+const ProjectCard = ({ title, description, git, technologies }) => {
+    // Determine the image based on the title
+    const imageSrc = title === 'House Finder Application' ? vpn : title === 'IMRS' ? copeople : null;
+
     return (
         <div className="max-w-sm sm:max-w-sm md:max-w-sm bg-gray-900 border border-neutral-100 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            {title=='Snap Shot' && <a href="#">
-                <img className="w-full rounded-t-lg h-auto object-cover " src={vpn} alt="" />
-            </a>}
-            {title=='Co People' && <a href="#">
-                <img className="w-full rounded-t-lg h-auto object-cover " src={copeople} alt="" />
-            </a>}
+            {imageSrc && (
+                <a href="#">
+                    <img className="w-full rounded-t-lg h-auto object-cover" src={imageSrc} alt={title} />
+                </a>
+            )}
             <div className="p-4 sm:p-6">
                 <a href="#">
                     <h5 className="text-2xl sm:text-xl md:text-2xl lg:text-3xl font-bold tracking-tight text-white bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-pink-500">{title}</h5>
@@ -22,20 +23,14 @@ const ProjectCard = ({ image, title, description, git, technologies }) => {
             <div className='m-2 sm:m-4 lg:m-6 flex justify-between'>
                 <div className='flex flex-wrap gap-2 pl-2'>
                     {technologies.map((tag, index) => (
-                        <p
-                            key={`${index}-${tag}`}
-                            className='text-[14px] text-blue-500'
-                        >
-                            #{tag}
-                        </p>
+                        <p key={`${index}-${tag}`} className='text-[14px] text-blue-500'>#{tag}</p>
                     ))}
                 </div>
-                <a href={git} className="text-red-300 border border-gray-200 rounded-lg shadow p-1 sm:p-2 lg:p-3 hover:text-green-500 duration-300">GitHub</a>
             </div>
         </div>
     );
 };
-  
+
 const Projects = () => {
     return (
         <div className="bg-black">
@@ -43,36 +38,31 @@ const Projects = () => {
                 {project.map((item, index) => (
                     <ProjectCard
                         key={index}
-                        image={item.image}
                         title={item.title}
                         description={item.description}
-                        links={item.links}
-                        git={item.git}
+                        //git={item.git}
                         technologies={item.technologies}
                     />
                 ))}
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }
 
-
 export const project = [
     {
-        title:'Co People',
-        description:'Co People is a dynamic web application I crafted using React, Node JS and React. This project is a modern and engaging social platform that allows users to connect, share content and interact seamlessly.',
-        image: {vpn},
-        git:'https://github.com/nithingooud/CoPeople',
-        technologies:['MongoDb' ,'ReactJS' , 'NodeJS']
+        title: 'House Finder Application',
+        description: 'Engineered a web application with user and owner modules, enabling users to register, browse properties, and make purchases, while owners can manage listings. Utilized HTML, CSS, and JavaScript for the frontend, with PHP for backend logic and MySQL on a WAMP server for database management.',
+        //git: 'https://github.com/yourusername/HouseFinderApp',  // Replace with the actual GitHub link
+        technologies: ['HTML', 'CSS', 'JS', 'PHP', 'SQL']
     },
     {
-        title:'Snap Shot',
-        description:'SnapShot is a stunning portfolio that I exclusively designed using React JS and tailwind CSS.This Project serves as a representation of a photographer’s work, highlighting their portfolio and services.',
-        image: {copeople},
-        git:"https://github.com/nithingooud/vpn_studios",
-        technologies:[ 'React JS', 'tailwind CSS']
+        title: 'IMRS',
+        description: 'Designed an intelligent medication remainder system leveraging HTML, CSS, JavaScript, PHP, and MySQL on a WAMP server. The system facilitates efficient patient data collection, streamlined doctor prescription management, and automated medication reminders, with real-time tracking of patient visits and prescription schedules.',
+        //git: "https://github.com/yourusername/IMRS",  // Replace with the actual GitHub link
+        technologies: ['TWILIO', 'HTML', 'CSS', 'JS', 'PHP', 'SQL']
     }
-]
+];
 
-export default Projects
+export default Projects;

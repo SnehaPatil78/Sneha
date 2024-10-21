@@ -1,4 +1,7 @@
 
+import React from 'react';
+import logo from './assets/att_globe_500x500.png';
+import logo2 from './assets/beccc.jpg';
 export const services = [
     {
         title: "Technology Enthusiast",
@@ -9,37 +12,36 @@ export const services = [
         icon: 'https://csgeeek.github.io/web.png',
     },
     {
-        title: "Photographer",
+        title: "Website Developer",
         icon: 'https://csgeeek.github.io/web.png',
     },
 ];
 
-export const name = 'Nithin';
+export const name = 'Sneha';
 
 export const experiences = [
     {
-        'company': 'Inncircles Technologies',
-        'role': 'Product Developer',
-        'duration': 'April 2023 - Present',
-        'logo': 'https://images.crunchbase.com/image/upload/c_pad,f_auto,q_auto:eco,dpr_1/e5gz1yggdy8sc1umna3e',
+        
+        'role': 'Completed intra college internship',
+        'duration': 'April 2022',
+        'logo': logo2,
         'points': [
-            'Involved in dynamic contributions to web and mobile📱 development projects, actively influencing and improving project outcomes.',
-            'Developed multiple shared components to simplify tasks for fellow developers, boosting efficiency and teamwork.',
-            'Enhanced product performance through significant contributions to backend development, optimizing essential components for improved efficiency 📈.',
-            'Implemented data security for the company’s product to provide role-based access control ⚙️.'
+            '1.Linux',
+            '2.Webpage designing(Front-end)',
+            '3.Advanced computer skills(Microsoft Excel)'
         ],
-        'url': 'https://inncircles.com/#home',
+        'url': 'https://www.becbgk.edu/',
     },
     {
-        'company': 'AT & T',
-        'role': 'Technical Intern',
-        'duration': 'Jan 2023 - March 2023',
-        'logo': 'https://www.att.com/ecms/dam/att/consumer/global/logos/att_globe_500x500.jpg',
+        
+        'role': 'Completed internship on web development',
+        'duration': 'March 2023',
+        'logo': logo,
         'points': [
-            'Gained experience with Git version control contributing to the development and maintenance of code repositories.',
-            'Worked on the application dashboard, making it more user-friendly and improving its overall functionality📱.'
+            'I utilized HTML, CSS, and JavaScript to develop interactive web pages.',
+            'Employed the Wamp server and MySQL to design the database, and leveraged PHP to establish the database connection📱.'
         ],
-        'url': 'https://www.att.com/',
+        'url': 'https://www.facebook.com/amsaembedded/',
     },
 ]
 
