@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/Sneha/static/css/main.3f9a7170.css",
+    "main.js": "/Sneha/static/js/main.9c99e301.js",
+    "static/js/592.328cebb7.chunk.js": "/Sneha/static/js/592.328cebb7.chunk.js",
+    "static/media/vpn1.png": "/Sneha/static/media/vpn1.9f01c8efc321f18f9e9a.png",
+    "static/media/copeople1.png": "/Sneha/static/media/copeople1.9105909ddc310efa8276.png",
+    "static/media/beccc.jpg": "/Sneha/static/media/beccc.8d51e1a6e3145fae79f6.jpg",
+    "index.html": "/Sneha/index.html",
+    "main.3f9a7170.css.map": "/Sneha/static/css/main.3f9a7170.css.map",
+    "main.9c99e301.js.map": "/Sneha/static/js/main.9c99e301.js.map",
+    "592.328cebb7.chunk.js.map": "/Sneha/static/js/592.328cebb7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3f9a7170.css",
+    "static/js/main.9c99e301.js"
+  ]
+}
